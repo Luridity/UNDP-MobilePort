@@ -484,7 +484,7 @@ footer{ /*Footer, nothing more to say here.*/
     transform: scale(0.9, 0.9);
 }
 
-@media (max-width: 768px) { /*Mobile viewporting for single column grid*/
+@media (max-width: 768px) { /*Mobile porting, im not even going to lie claude helped me do this.*/
     .hcard-container {
         grid-template-columns: 1fr;
     }
@@ -495,21 +495,37 @@ footer{ /*Footer, nothing more to say here.*/
     .help-cards {
         grid-row: span 2;
     }
-} /*IM FINALLY FREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE*/
+} 
 
 @media (max-width: 768px) {
-
-    body { padding-bottom: 0; }
-
-    /* Nav: shrink, hide long label, put toggle in flow */
-    .topnav { height: auto; min-height: 50px; padding: 0 0.25rem; }
-    .topnav a { padding: 14px 10px; font-size: 14px; }
-    .home-link .label { display: none; }
-    .home-icon { max-height: 32px; width: auto; }
-    .theme-toggle { position: static; transform: none; align-self: center; flex-shrink: 0; }
-    .theme-toggle:hover { transform: scale(1.1); }
-
-    /* Footer: stop covering content, flow at bottom of page */
+    body { 
+        padding-bottom: 0; 
+    }
+    .topnav { 
+        height: auto; 
+        min-height: 50px; 
+        padding: 0 0.25rem; 
+    }
+    .topnav a { 
+        padding: 14px 10px; 
+        font-size: 14px; 
+    }
+    .home-link .label { 
+        display: none; 
+    }
+    .home-icon { 
+        max-height: 32px; 
+        width: auto; 
+    }
+    .theme-toggle { 
+        position: static; 
+        transform: none; 
+        align-self: center; 
+        flex-shrink: 0; 
+    }
+    .theme-toggle:hover { 
+        transform: scale(1.1); 
+    }
     footer {
         position: static;
         width: 100%;
@@ -518,32 +534,63 @@ footer{ /*Footer, nothing more to say here.*/
         padding: 0.75rem 1rem;
         margin-top: auto;
     }
-    footer h3 { font-size: 0.7rem; overflow-wrap: anywhere; padding: 0.15rem 0; }
-
-    /* Home page */
-    main { flex: 1; display: flex; flex-direction: column; }
-    .main-content { flex: 1; }
-    .home-info { margin: 1rem; }
-    .home-info h1 { font-size: 1.6rem; }
-    .carousel { padding: 1rem; margin: 1.5em 0; }
+    footer h3 { 
+        font-size: 0.7rem; 
+        overflow-wrap: anywhere; 
+        padding: 0.15rem 0; 
+    }
+    main { 
+        flex: 1; 
+        display: flex; 
+        flex-direction: column; 
+    }
+    .main-content { 
+        flex: 1; 
+    }
+    .home-info { 
+        margin: 1rem; 
+    }
+    .home-info h1 { 
+        font-size: 1.6rem; 
+    }
+    .carousel { 
+        padding: 1rem; 
+        margin: 1.5em 0; 
+    }
     .carousel::scroll-button(left),
-    .carousel::scroll-button(right) { display: none; }  /* swipe instead */
-    .card { flex: 0 0 75vw; width: auto; height: 12em; }
-    .user-question { text-align: center; padding: 0 1rem; }
-    .read-more { margin: 1rem auto 2rem; }
+    .carousel::scroll-button(right) { 
+        display: none; 
+    }
+    .card { 
+        flex: 0 0 75vw; 
+        width: auto; 
+        height: 12em; 
+    }
+    .user-question { 
+        text-align: center; 
+        padding: 0 1rem; 
+    }
+    .read-more { 
+        margin: 1rem auto 2rem; 
+    }
 
-    /* About page: stack the two columns */
-    .split-content { flex-direction: column; }
+    .split-content { 
+        flex-direction: column; 
+    }
     .content1, .content2 {
         flex: none;
         width: 100%;
         padding: 1rem;
         overflow-y: visible;
     }
-    .content2 { border-left: none; border-top: 1px solid white; }
-    .split-content h1 { font-size: 1.5rem; }
+    .content2 { 
+        border-left: none; 
+        border-top: 1px solid white; 
+    }
+    .split-content h1 { 
+        font-size: 1.5rem; 
+    }
 
-    /* Actions page: single-column cards */
     .content1:has(> .hcard-container) { padding: 1rem; }
     .hcard-container {
         grid-template-columns: 1fr;
@@ -571,15 +618,18 @@ footer{ /*Footer, nothing more to say here.*/
         object-fit: cover;
         margin-top: 0;
     }
-    .help-cards h1, .help-cards h2, .help-cards p { margin: 0.4rem 0 0; }
-    .help-card-rectangle .card-text h1 { margin-top: 0; font-size: 1.3rem; }
+    .help-cards h1, .help-cards h2, .help-cards p { 
+        margin: 0.4rem 0 0; 
+    }
+    .help-card-rectangle .card-text h1 { 
+        margin-top: 0; 
+        font-size: 1.3rem; 
+    }
 }
-
-/* Touch devices: no hover zoom/blur (it gets "stuck" after a tap) */
 @media (hover: none) {
     .hcard-container > :hover,
     .hcard-container:has(> :hover) > :not(:hover) {
         transform: none;
         filter: none;
     }
-}
+} /*IM FINALLY FREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE*/
