@@ -339,7 +339,7 @@ footer{ /*Footer, nothing more to say here.*/
     ul {
         display: flex;
         flex-direction: column;
-        list-style-type: disc;
+        list-style-type: "►";
         padding: 0 0 0 1.25rem;
         margin: 0 0 1rem;
         gap: 1.5em;  
